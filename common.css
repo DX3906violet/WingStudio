@@ -1,0 +1,24 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.f1 {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.style_red{
+    color: rgba(210, 62, 29, 0.935);
+}
+/* 快捷导航栏 */
+.shortcut{
+    height: 30px;
+    line-height: 30px;
+    background-color: aliceblue;
+}
+.shortcut ul li{
+    float: left;
+}
