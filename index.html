@@ -1,41 +1,83 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>仿腾讯官网</title>  
-<link rel="stylesheet" href="CSS\styles.css">  
-<link rel="stylesheet" href="JS\style.js">  
-</head>  
-<body>  
-  
-<nav>  
-  <div class="win-logo">  
-    <a href="#"><img src="images\menu_logo.png" alt="公司Logo"></a>  
-  </div>  
-  <ul class="win-nav-links">  
-    <li><a href="#">首页</a></li>  
-    <li><a href="#">产品</a></li>  
-    <li><a href="#">新闻</a></li>  
-    <li><a href="#">关于我们</a></li>  
-  </ul>  
-  <div class="win-user-actions">  
-    <a href="#" class="win-login">登录</a>  
-    <a href="#" class="win-register">注册</a>  
-  </div>
-  <div class="win-language-switcher">  
-    <button class="win-lang-btn" data-lang="en">English</button>  
-    <button class="win-lang-btn" data-lang="zh">中文</button>  
-  </div> 
-  <div id="win-nav-toggle" class="win-nav-toggle">  
-    <i class="fas fa-bars"></i> <!-- 使用Font Awesome或其他图标库 -->  
-  </div>   
-</nav>  
-  
+<!DOCTYPE html>
+<html lang="en">
 
-<main>  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>仿腾讯官网</title>
+  <link rel="stylesheet" href="CSS\styles.css">
+  <link rel="stylesheet" href="JS\style.js">
+</head>
 
-</main>  
-  
-</body>  
+<body>
+
+  <!-- 导航栏 -->
+  <nav>
+    <div class="win-logo">
+      <a href="#"><img src="images\menu_logo.png" alt="公司Logo"></a>
+    </div>
+    <ul class="win-nav-links">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">产品</a></li>
+      <li><a href="#">新闻</a></li>
+      <li><a href="#">关于我们</a></li>
+    </ul>
+    <div class="win-user-actions">
+      <a href="#" class="win-login">登录</a>
+      <a href="#" class="win-register">注册</a>
+    </div>
+    <div class="win-language-switcher">
+      <button class="win-lang-btn" data-lang="en">English</button>
+      <button class="win-lang-btn" data-lang="zh">中文</button>
+    </div>
+    <div id="win-nav-toggle" class="win-nav-toggle">
+      <i class="fas fa-bars"></i> <!-- 使用Font Awesome或其他图标库 -->
+    </div>
+
+    <!-- 轮播图 -->
+    <div class="win-carousel">
+    <div class="win-arrow-l">&lt;</div>
+    <div class="win-arrow-r">&gt;</div>
+
+      <ul>
+        <li>
+          <a href="#"><img src="images\img1.avif" alt="Product 1" class="win-carousel-image"></a>
+          <h3 class="win-carousel-title">科技</h3>
+        </li>
+        <li>
+          <a href="#"><img src="images\img2.avif" alt="Product 2" class="win-carousel-image"></a>
+          <h3 class="win-carousel-title">高速</h3>
+        </li>
+        <li>
+          <a href="#"><img src="images\index_detail_1.jpg" alt="Product 3" class="win-carousel-image"></a>
+          <h3 class="win-carousel-title">腾讯</h3>
+        </li>
+        <li>
+          <a href="#"><img src="images\index_detail_3.jpg" alt="Product 4" class="win-carousel-image"></a>
+          <h3 class="win-carousel-title">腾讯</h3>
+        </li>
+        <li>
+          <a href="#"><img src="images\index_develop_bg1.jpg" alt="Product 5" class="win-carousel-image"></a>
+          <h3 class="win-carousel-title">高效</h3>
+        </li>
+      </ul>
+      <div class="win-circle">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+
+  </main>
+
+</body>
+
 </html>
