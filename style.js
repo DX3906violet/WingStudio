@@ -57,8 +57,24 @@ window.addEventListener('load', function () {
     win_arrow_l.style.display = 'block';
     win_arrow_r.style.display = 'block';
   })
-    win_carousel.addEventListener('mouseleave', function () {
-      win_arrow_l.style.display = 'none';
-      win_arrow_r.style.display = 'none';
+  win_carousel.addEventListener('mouseleave', function () {
+    win_arrow_l.style.display = 'none';
+    win_arrow_r.style.display = 'none';
   })
+
+  var ul = win_carousel.querySelector('ul');
+  var ol = win_carousel.querySelector('.win-circle > ol');
+  for (var i = 0; i < ul.children.length; i++) {
+    var li = document.createElement('li');
+    ol.appendChild(li);
+    li.addEventListener('click', function () {
+      for (var i = 0; i = ol.children.length; i++) {
+        ol.children[1].className = '';
+      }
+      this.className = 'current';
+    })
+  }
+  ol.children[0].className = 'current';
 })
+
+
