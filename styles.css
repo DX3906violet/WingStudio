@@ -120,17 +120,50 @@ nav {
 
 .win-carousel {
   position: relative;
-  width: 700px;
+  width: 720px;
   height: 420px;
+  overflow: hidden;
+}
+
+.win-carousel-image {
+  width: 720px;
+  height: 420px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: transform 0.3s ease;
+}
+
+.win-carousel-image:hover{
+  transform: scale(1.05);
+}
+
+.win-carousel-image:nth-child(1) {
+  opacity: 1;
+}
+
+.win-carousel-description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 0;
 }
 
 .win-carousel-title {
   position: absolute;
-  bottom: 100px;
+  bottom: 20px;
   color: #fff;
 }
 
 .win-carousel ul {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 700%;
   padding: 0;
   margin: 0;
@@ -143,8 +176,8 @@ nav {
 
 .win-circle {
   position: absolute;
-  bottom: 120px;
-  right: 300px;
+  bottom: 40px;
+  right: 40px;
 }
 
 
@@ -168,104 +201,93 @@ nav {
   background-color: #fff;
 }
 
-.win-arrow-l {
-  display: none;
-  position: absolute;
-  top: 50%;
-  margin-top: -70px;
-  width: 30px;
-  height: 40px;
-  left: 40px;
-  background-color: #9e9b9b;
-  text-align: center;
-  line-height: 40px;
-  color: #fff;
-  /* font-family: 'icomoon'; */
-  font-size: 18px;
-  transition: transform 0.3s ease;
+.win-circle>ol li.win-current {
+  background-color: #fff;
 }
 
-.win-arrow-l:hover {
-  transform: scale(1.05);
-}
-
-
+.win-arrow-l,
 .win-arrow-r {
   display: none;
   position: absolute;
-  top: 50%;
-  margin-top: -70px;
+  top: 40%;
   width: 30px;
   height: 40px;
-  right: 280px;
   background-color: #9e9b9b;
   text-align: center;
   line-height: 40px;
   color: #fff;
-  font-family: 'icomoon';
   font-size: 18px;
+  z-index: 2;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
+.win-arrow-l {
+  left: 40px;
+}
+
+.win-arrow-r {
+  right: 40px;
+}
+
+.win-arrow-l:hover,
 .win-arrow-r:hover {
   transform: scale(1.05);
-}
-
-.win-carousel-image {
-  width: 450px;
-  height: 300px;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-.win-carousel-image:nth-child(1) {
-  opacity: 1;
+  background-color: #73aae8;
 }
 
 
-.win-carousel-description {
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  /* 背景半透明，以便在图片上显示文字 */
-  color: white;
-  text-align: center;
-  margin: 0 auto;
-  bottom: 0;
-}
-
-
-
-/* 响应式布局 */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .win-logo {
-    margin-bottom: 10px;
-  }
-
+/* 小屏幕下的导航栏样式 */
+@media (max-width: 600px) {
   .win-nav-links {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
   }
 
   .win-nav-links li {
-    margin: 5px 0;
+    margin-bottom: 10px;
+  }
+
+  .win-nav-links li a {
+    margin-right: 0;
+  }
+
+  .win-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .win-language-switcher {
+    display: none;
   }
 
   .win-user-actions {
-    margin-top: 10px;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    margin-top: 10px;
   }
 
   .win-user-actions a {
-    margin: 5px 0;
+    margin-bottom: 5px;
+  }
+}
+
+/* 小屏幕下的轮播图样式 */
+@media (max-width: 600px) {
+
+  .win-carousel .win-arrow-l,
+  .win-carousel .win-arrow-r {
+    display: none;
+  }
+
+  .win-carousel-title {
+    font-size: 16px;
+    padding: 5px 0;
   }
 }
